@@ -1,0 +1,12 @@
+{
+	"development" : {
+		"url" : "mongodb://localhost",
+		"port" : 27017,
+		"collection" : "tesis"
+	},
+	"production" : {
+		"url" : "mongodb://localhost",
+		"port" : 27017,
+		"collection" : "tesis"
+	}
+}

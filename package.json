@@ -1,0 +1,23 @@
+{
+  "name": "agents-generator",
+  "version": "1.0.0",
+  "description": "agent generator for hybrid modelling",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "agent",
+    "based",
+    "model",
+    "agent",
+    "generator",
+    "population"
+  ],
+  "author": "firyalff",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2",
+    "mongoose": "^4.9.5"
+  }
+}
