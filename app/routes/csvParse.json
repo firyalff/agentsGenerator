@@ -1,7 +1,8 @@
 {
-	"prefix" : "/v1/agents"
+	"prefix" : ""
 	, "middlewares" : []
 	, "routes" : [
-	["post", "/csv-parse", "Parser.store"]
+	["get", "/csv-parse", "Parser.index"]
+	, ["post", "/csv-parse", "Parser.store"]
 	]
 }
