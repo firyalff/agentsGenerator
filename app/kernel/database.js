@@ -1,5 +1,6 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
+, config = require('./../configs/database')[process.env.NODE_ENV]
 
-mongoose.connect('mongodb://localhost:27017/beerlocker');
+mongoose.connect(`${config.url}:${config.port}/${config.database}`);
 
 module.exports = mongoose;
