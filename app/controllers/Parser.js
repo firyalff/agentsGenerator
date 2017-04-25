@@ -13,7 +13,7 @@ const models  = require(__dirname+'/../models')
 		var inputFields = [
 		{
 			name: 'test', 
-			maxCount:1
+			maxCount: 1
 		}, 
 		];
 
@@ -28,14 +28,26 @@ const models  = require(__dirname+'/../models')
 			})
 		});
 
+		let promiseParser = function (input) {
+			return new Promise((resolve, reject) => {
+				parse(input, function(err, output){
+					if (err) {
+						reject(err);
+					}
+					else {
+						resolve(output);
+					}
+				});
+			});
+		}
 
 		return promiseUpload
 		.then(values => {
-			console.log(req.files)
-			
-			return res.json({'test': 'fafa'});
+			return promiseParser(req.files.test[0].buffer)
 		})
-
+		.then(values => {
+			return res.json({'test': 'fafa', file: values});
+		})
 	}
 }
 
