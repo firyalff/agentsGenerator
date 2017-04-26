@@ -4,6 +4,8 @@ const fs = require("fs")
 , path = require("path")
 , mongoose = require('./../kernel/database');
 
+mongoose.Promise = global.Promise;
+
 var db = {};
 
 fs
@@ -13,7 +15,7 @@ fs
 })
 .forEach((file) => {
 	const model = require(path.join(__dirname, file))
-	db[model.name] = model;
+	db[model.modelName] = model;
 });
 
 module.exports = db;
