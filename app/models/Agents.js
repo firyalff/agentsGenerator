@@ -2,7 +2,8 @@ const mongoose = require('./../kernel/database')
 , ObjectId = mongoose.Schema.Types.ObjectId
 , schema = new mongoose.Schema({
 	name: String,
-	age: Number,
+	location: String,
+	age: String,
 	male: Boolean,
 	married: Boolean,
 	spouse: ObjectId,
