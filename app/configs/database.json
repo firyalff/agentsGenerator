@@ -1,11 +1,11 @@
 {
 	"development" : {
-		"url" : "mongodb://localhost",
+		"url" : "mongodb://127.0.0.1",
 		"port" : 27017,
 		"database" : "tesis"
 	},
 	"production" : {
-		"url" : "mongodb://localhost",
+		"url" : "mongodb://127.0.0.1",
 		"port" : 27017,
 		"database" : "tesis"
 	}
