@@ -15,6 +15,6 @@ require('./app/kernel/database');
 // require('./app/kernel/security')(app);
 // require('./app/kernel/interceptor')(app);
 require('./app/routes')(app);
-// require('./app/workers')(app);
+require('./app/workers')();
 
 module.exports = app;
